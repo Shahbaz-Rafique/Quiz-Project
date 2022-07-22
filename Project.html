@@ -1,0 +1,147 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz Application</title>
+    <link rel="stylesheet" href="Project.css">
+    <!-- font awesome -->
+ <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+ <!--Import Google Icon Font-->
+ <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+ <!-- Compiled and minified CSS -->
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/css/materialize.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+  </head>
+  <body>
+    <header>
+      <nav class="nav-wrapper blue darken-4">
+      <div class="container">
+      <a href="#" class="brand-logo">Online Quiz Application</a>
+      <a href="#" class="sidenav-trigger" data-target="mobile-menu">
+      <i class="material-icons">menu</i>
+      </a>
+      <ul class="right hide-on-med-and-down">
+      <li><a href="Main.html">Home</a></li>
+      <li><a href="Project.html">SignUp</a></li>
+      <li><a href="https://www.instagram.com/accounts/login/" class="tooltipped btn-floating btn-small blue darken-6 data-tooltip="Instagram">
+        <i class="fab fa-instagram"></i>
+      </a></li>
+      <li><a href="https://web.facebook.com/?_rdc=1&_rdr" class="tooltipped btn-floating btn-small blue darken-6" data-tooltip="Facebook">
+        <i class="fab fa-facebook"></i>
+      </a></li>
+      <li><a href="https://twitter.com/i/flow/login" class="tooltipped btn-floating btn-small blue darken-6" data-tooltip="Twitter">
+        <i class="fab fa-twitter"></i>
+      </a></li>
+      </ul>
+      </div>
+      </nav>
+      
+      <ul class="sidenav grey darken-4" id="mobile-menu">
+      <li><a href="#">Home</a></li>
+      <li><a href="#">Services</a></li>
+      </ul>
+      </header>
+
+    <section class="vh-100 gradient-custom">
+        <div class="container py-5 h-100">
+          <div class="row justify-content-center align-items-center h-100">
+            <div class="col-12 col-lg-9 col-xl-7">
+              <div class="card shadow-2-strong card-registration" style="border-radius: 15px;">
+                <div class="card-body p-4 p-md-5">
+                  <h3 class="mb-4 pb-2 pb-md-0 mb-md-5" id="register"><b>Registration Form</b></h3>
+                 <!--Registration Form--> 
+                  <form id="signupform">
+                    <div class="row">
+                      <div class="col-md-6 mb-4">
+      
+                        <div class="form-outline">
+                          <input type="text" id="firstName" class="form-control form-control-lg" />
+                          <label class="form-label" for="firstName">First Name</label>
+                        </div>
+      
+                      </div>
+                      <div class="col-md-6 mb-4">
+      
+                        <div class="form-outline">
+                          <input type="text" id="lastName" class="form-control form-control-lg" />
+                          <label class="form-label" for="lastName">Last Name</label>
+                        </div>
+      
+                      </div>
+                    </div>
+      
+                    <div class="row">
+                      <div class="col-md-6 mb-4 pb-2">
+      
+                        <div class="form-outline">
+                          <input type="text" class="form-control form-control-lg" id="username" />
+                          <label for="username" class="form-label">Username</label>
+                        </div>
+                    </div>
+                        <div class="col-md-6 mb-4 pb-2">
+      
+                            <div class="form-outline">
+                              <input type="text" id="rollnumber" class="form-control form-control-lg" />
+                              <label class="form-label" for="password">Roll No</label>
+                            </div>
+          
+                          </div>
+                      </div>
+                      
+      
+                    <div class="row">
+                      <div class="col-md-6 mb-4 pb-2">
+      
+                        <div class="form-outline">
+                          <input type="password" id="password" class="form-control form-control-lg" />
+                          <label class="form-label" for="password">Password</label>
+                        </div>
+                        
+                      </div>
+                      <div class="col-md-6 mb-4 pb-2">
+      
+                        <div class="form-outline">
+                          <input type="password" id="Cpassword"  class="form-control form-control-lg" />
+                          <label class="form-label" for="password">Confirm Password</label>
+                        </div>
+      
+                      </div>
+                    </div>
+                    <p id="PCP"></p>
+                    <p>Already Have an account? <a onclick="change()" id="isalready" href="">Login</a></p>
+                    <button class="btn btn-primary" onclick="signup()" id="formsubmit">Register</button>
+                  </form>
+                   <!--Login Form--> 
+                  <form id="loginform" style="display: none;">
+                    <div class="row">
+                      <div class="">
+      
+                        <div class="form-outline">
+                          <input type="text" class="form-control form-control-lg" id="logname" />
+                          <label for="username" class="form-label">Username</label>
+                        </div>
+                    </div>
+                        <div class="">
+      
+                            <div class="form-outline">
+                              <input type="password" id="logpass" class="form-control form-control-lg" />
+                              <label class="form-label" for="password">Password</label>
+                            </div>
+          
+                          </div>
+                      </div>
+                      <p>Don't Have an Account? <a onclick="change1()" id="loginformsubmit" href="">SignUp</a></p>
+                      <button class="btn btn-primary" onclick="login()" id="formsubmit1">Login</button>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <script src="Project.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+  </body>
+</html>

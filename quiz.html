@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<html>
+    <head>
+        <title>Quiz</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="quiz.css">
+        <script src="https://cdn.anychart.com/releases/8.0.1/js/anychart-core.min.js"></script>
+      <script src="https://cdn.anychart.com/releases/8.0.1/js/anychart-pie.min.js"></script>
+    </head>
+    <body>
+      <!-- <div class="credentials">
+        <h3 id="Sname">Student Name: </h3>
+        <h3 id="Sroll">Roll No.: </h3>
+      </div> -->
+        <div class="Instructions" id="instruction" style="display: block;">
+        <h1 class="h1">Welcome to Online Quiz Application</h1>
+        <h2 class="h2">Instructions</h2>
+        <ol class="ol">
+            <li>This Quiz consist of 20 Questions.</li>
+            <li>Once you have selected one choice & save it, you will not be able to change your choice.</li>
+            <li>Be carefull while selecting any choice.</li>
+            <li>You will not be able to go back to previous questions.</li>
+            <li>You will Skip Question without selecting any choice & press Next Question.</li>
+            <li>Each Question has 4 choices.</li>
+            <li>Each question has of 4 Marks and total quiz marks are 80.</li>
+            <li>Right Answer has 4 marks and there will be -1 on wrong answer.</li>
+            <li>You have 10 Minutes to complete this Quiz.</li>
+        </ol>
+        <div id="check" class="check">
+        <input type="checkbox" id="ischeck">
+        <label for="read">I have carefully Read all these Instructions.</label>
+        <br>
+        <br>
+        <div class="upper">
+        <button onclick="start()" class="btn btn-secondary" id="SQ" onmouseover="colorchange('SQ')" onmouseout="colorchange1('SQ')">Start Quiz</button>
+    </div>
+  </div>
+</div>
+
+
+<div class="quiz-container" id="quiz" style="display:none">
+    <div class="quiz-header">
+    <h2 id="times">Time Starts</h2>
+    <h2 id="questionno"></h2>
+      <h2 id="question">Question text</h2>
+      <ul>
+        <li>
+          <input type="radio" name="answer" id="a" value="A" class="answer">
+          <label for="a" id="a_text">Question</label>
+        </li>
+
+        <li>
+          <input type="radio" name="answer" id="b" value="B" class="answer">
+          <label for="b" id="b_text">Question</label>
+        </li>
+
+        <li>
+          <input type="radio" name="answer" id="c" value="C" class="answer">
+          <label for="c" id="c_text">Question</label>
+        </li>
+
+        <li>
+          <input type="radio" name="answer" id="d" value="D" class="answer">
+          <label for="d" id="d_text">Question</label>
+        </li>
+      </ul>
+    </div>
+    <div class="upper">
+    <button onclick="ischeck(),submitquiz(),nextquestion(),change()"id="submit" onmouseover="colorchange('submit')" onmouseout="colorchange1('submit')">Next Question</button>
+    <button onclick="saved(),answers()" id="save" onmouseover="colorchange('save')" onmouseout="colorchange1('save')">Save</button>
+    <button onclick="submit()" id="submitQ" onmouseover="colorchange('submitQ')" onmouseout="colorchange1('submitQ')">submit Quiz</button>
+  </div>
+</div>
+  <div id="Showresult" style="display: none;">
+  <h2 class="QQ" id="Q">Your Quiz has been Submitted.</h2>
+  <h2 class="QQ" id="attempted"></h2>
+  <h2 class="QQ" id="unattempted"></h2>
+  <h2 class="QQ" id="correct"></h2>
+  <h2 class="QQ" id="marks"></h2>
+  <button class="QD" onclick="makechart()"  id="QD" onmouseover="colorchange('QD')" onmouseout="colorchange1('QD')">Quiz Details</button>
+  <button class="SR" onclick="showcorrectans()" id="result" onmouseover="colorchange('result')" onmouseout="colorchange1('result')">Show Correct Answers</button>
+  <button class="PR" onclick="printresult()" id="PR" onmouseover="colorchange('PR')" onmouseout="colorchange1('PR')">Print Result</button>
+</div>
+<div id="T" style="display: none; font-family: 'Times New Roman', Times, serif; color: white;">
+<h1 style="display: none;" id="TH">Quiz Time has been Ended. Kindly Submit Your Quiz</h1>
+<button id="TE" style="display: none;" onclick="submit()" onmouseover="colorchange('timeends')" onmouseout="colorchange1('timeends')">Submit</button>
+</div>
+<div class="chart" id="container" style="width: 70%; height: 70% ; display: none;"></div>
+<h1 class="CA" id="CA" style="display: none;"></h1>
+<p class="CAns" style="display: none;" id="showans"></p>
+<div class="below" id="BCB" style="display: none;">
+  <button onclick="backs1()"  id="back" onmouseover="colorchange('back')" onmouseout="colorchange1('back')" style="display: none;">Back</button>
+  <button onclick="backs()"  id="chartback" onmouseover="colorchange('chartback')" onmouseout="colorchange1('chartback')" style="display: none;">Go Back</button>
+  </div>
+        <script src="quiz.js"></script>
+    </body>
+</html>

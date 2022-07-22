@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Quiz Application</title>
+ <!-- font awesome -->
+ <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+ <!--Import Google Icon Font-->
+ <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+ <!-- Compiled and minified CSS -->
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/css/materialize.min.css">
+ <style>
+    p{
+      text-align: justify;
+    }
+  header{
+    background: url(Q1.jpg);
+      background-size: cover;
+      background-position: center;
+      font-family: 'Times New Roman', Times, serif;
+      min-height: 1000px;
+  }
+  body{
+  overflow: hidden;
+  }
+  .section{
+    padding-top: 4vw;
+    padding-bottom: 4vw;
+  }
+   .connect:focus{
+    text-decoration: underline;
+  }
+  .tabs .indicator{
+    background-color: #1a237e;
+  }
+  .tabs .tab a:focus, .tabs .tab a:focus.active{
+    background-color: transparent;
+  }
+  @media screen and (max-width: 670px){
+    header{
+      min-height: 500px;
+    }
+  }
+  div.container1{
+    position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  color: white;
+  font-size: 40px;
+  padding: 12px 24px;
+  border: none;
+  cursor: pointer;
+  border-radius: 56px;
+  text-align: center;
+  }
+  .image {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+button.start{
+    width: 200px;
+    height: 100px;
+    position: absolute;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 30px;
+    top: 40%;
+    left: 30%;
+
+}
+
+  </style>
+
+</head>
+
+<body>
+    <header>
+        <nav class="nav-wrapper blue darken-4">
+        <div class="container">
+        <a href="#" class="brand-logo"><b>Online Quiz Application</b></a>
+        <a href="#" class="sidenav-trigger" data-target="mobile-menu">
+        <i class="material-icons">menu</i>
+        </a>
+        <ul class="right hide-on-med-and-down">
+        <li><a href="#home">Home</a></li>
+        <li><a href="Project.html">SignUp</a></li>
+        <li><a href="https://www.instagram.com/accounts/login/" class="tooltipped btn-floating btn-small blue darken-4 data-tooltip="Instagram">
+          <i class="fab fa-instagram"></i>
+        </a></li>
+        <li><a href="https://web.facebook.com/?_rdc=1&_rdr" class="tooltipped btn-floating btn-small blue darken-4" data-tooltip="Facebook">
+          <i class="fab fa-facebook"></i>
+        </a></li>
+        <li><a href="https://twitter.com/i/flow/login" class="tooltipped btn-floating btn-small blue darken-4" data-tooltip="Twitter">
+          <i class="fab fa-twitter"></i>
+        </a></li>
+        </ul>
+        </div>
+        </nav>
+        
+        <ul class="sidenav grey lighten-3" id="mobile-menu">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Services</a></li>
+        </ul>
+        <div class="container1">
+        <div class="centered" style="padding-bottom: 220px;"><b>Boost Your Learning Skills</b></div>
+        </div>
+        <div class="container1">
+          <div class="centered" style="padding-bottom: 50px; width: 400px;"><button class="btn btn-primary" onclick="change()" style="background-color: #1a747e; font-size: 30px; height: 50px; font-family: 'Times New Roman', Times, serif;"><b>Get Started Quiz</b></button></div>
+
+        </div>
+        </header>
+
+<script>
+  function change(){
+    window.close('Main.html');
+    window.open('Project.html');
+  }
+</script>
+</body>
